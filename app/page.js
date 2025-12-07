@@ -86,7 +86,7 @@ export default function Home() {
                 <span className="text-[#58a6ff]">.</span>
               </h1>
               <p className="text-xl text-[#8b949e] max-w-lg mx-auto leading-relaxed">
-                Visualize your year in code. Analyze your GitHub contribution history with a modern touch.
+                Decoding your year on GitHub.
               </p>
             </div>
 
@@ -107,7 +107,7 @@ export default function Home() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full py-5 bg-[#238636] hover:bg-[#2ea043] rounded-2xl font-bold text-white shadow-lg shadow-[#238636]/20 disabled:opacity-50 disabled:cursor-not-allowed transition-all active:scale-[0.98] flex items-center justify-center gap-2"
+                  className="w-full py-5 bg-[#238636] hover:bg-[#2ea043] rounded-2xl text-xl font-bold text-white shadow-lg shadow-[#238636]/20 disabled:opacity-50 disabled:cursor-not-allowed transition-all active:scale-[0.98] flex items-center justify-center gap-2"
                 >
                   {loading ? (
                     <>
@@ -115,7 +115,7 @@ export default function Home() {
                       <span>Analyzing...</span>
                     </>
                   ) : (
-                    'Generate Recap'
+                    'Generate your recap'
                   )}
                 </button>
               </form>
@@ -127,17 +127,13 @@ export default function Home() {
                 </div>
               )}
             </div>
-
-            <footer className="absolute bottom-8 text-[#484f58] text-sm">
-              Built for developers • Open Source
-            </footer>
           </div>
         )}
 
         {data && (
           <div className="max-w-7xl mx-auto p-6 md:p-12 space-y-8 animate-in fade-in zoom-in-95 duration-500" ref={recapRef}>
             {/* Top bar */}
-            <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+            <div className="flex lg-flex-col lg-gap-3 md:flex-row md:items-center md:justify-between">
               <button
                 onClick={() => setData(null)}
                 className="group flex items-center gap-2 text-[#8b949e] hover:text-[#58a6ff] transition-colors py-2 px-4 rounded-lg hover:bg-[#58a6ff]/10 w-fit"
@@ -306,6 +302,10 @@ export default function Home() {
                   </div>
                 </div>
               ))}
+            </div>
+
+            <div className="text-center pt-8 border-t border-[#30363d]">
+              <p className="text-[#8b949e] text-sm">Generated with <span className="text-[#58a6ff] font-bold">Rebase</span> • 2025</p>
             </div>
           </div>
         )}
