@@ -11,6 +11,7 @@
   "dependencies": {
     "html2canvas-pro": "^1.5.13",
     "next": "16.0.7",
+    "octokit": "^5.0.5",
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "recharts": "^3.5.1"
